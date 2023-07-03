@@ -12,15 +12,7 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-## Architecture Before Hardening / Security Controls
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ff4f4e01-1619-4fa1-aee9-59b69e6ce537)
-
-
-## Architecture After Hardening / Security Controls
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/a5eee13f-dd82-4f05-a8db-a5084199d36a)
-
-
-The architecture of the mini honeynet in Azure consists of the following components:
+## Azure components utilised:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
@@ -29,6 +21,16 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
+- 
+## Architecture Before Hardening / Security Controls
+![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ff4f4e01-1619-4fa1-aee9-59b69e6ce537)
+
+
+## Architecture After Hardening / Security Controls
+![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/a5eee13f-dd82-4f05-a8db-a5084199d36a)
+
+
+
 
 For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
@@ -70,6 +72,41 @@ Stop Time	2023-03-19 15:37
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
+
+## Utilizing NIST 800.61r2 Computer Incident Handling Guide
+
+For each simulated attack I practiced incident responses following NIST SP 800-61 r2.
+
+![NIST 800.61](https://i.imgur.com/6PTG7c0l.png)
+
+Each organization will have policies related to an incident response that should be followed. This event is just a walkthrough for possible actions to take in the detection of malware on a workstation.  
+
+#### Preparation
+
+- The Azure lab was set up to ingest all of the logs into Log Analytics Workspace, Sentinel and Defender were configured, and alert rules were put in place.
+
+#### Detection & Analysis
+
+- Malware has been detected on a workstation with the potential to compromise the confidentiality, integrity, or availability of the system and data.
+- Assigned alert to an owner, set the severity to "High", and the status to "Active"
+- Identified the primary user account of the system and all systems affected.
+- A full scan of the system was conducted using up-to-date antivirus software to identify the malware.
+- Verified the authenticity of the alert as a "True Positive".
+- Sent notifications to appropriate personnel as required by the organization's communication policies.
+
+#### Containment, Eradication & Recovery
+
+- The infected system and any additional systems infected by the malware were quarantined.
+- If the malware was unable to be removed or the system sustained damage, the system would have been shut down and disconnected from the network.
+- Depending on organizational policies the affected systems could be restored known clean state, such as a system image or a clean installation of the operating system and applications. Or an up-to-date anti-virus solution could be used to clean the systems. 
+
+#### Post-Incident Activity
+
+- In this simulated case, an employee had downloaded a game that contained malware. 
+- All information was gathered and analyzed to determine the root cause, extent of damage, and effectiveness of the response. 
+- Report disseminated to all stakeholders.
+- Corrective actions are implemented to remediate the root cause.
+- And a lessons-learned review of the incident was conducted.
 
 ## Conclusion
 
