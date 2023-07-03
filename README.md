@@ -1,5 +1,6 @@
 # Building Honeynet in Azure + SOC: Cyber attacks in real time
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/f9f9a020-b1b5-4184-bc2f-12d5c9e85664)
+
+![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ae0ed791-6196-4592-a598-41e60eed02a3)
 
 
 ## Introduction
