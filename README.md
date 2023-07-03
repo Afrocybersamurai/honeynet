@@ -22,7 +22,8 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
-- 
+
+
 ## Architecture Before Hardening / Security Controls
 ![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ff4f4e01-1619-4fa1-aee9-59b69e6ce537)
 
