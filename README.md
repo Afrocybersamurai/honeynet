@@ -27,11 +27,13 @@ In this project, I build a mini honeynet in Azure and ingest log sources from va
 
 
 ## Architecture Before Hardening / Security Controls
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ff4f4e01-1619-4fa1-aee9-59b69e6ce537)
+![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/d1581a98-9c71-4231-851a-cd3ada79922d)
+
 
 
 ## Architecture After Hardening / Security Controls
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/a5eee13f-dd82-4f05-a8db-a5084199d36a)
+![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/a2966eac-e767-4a91-ac02-ac6fdb49a70f)
+
 
 
 
