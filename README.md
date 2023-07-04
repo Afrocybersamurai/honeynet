@@ -3,6 +3,7 @@
 ![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/ae0ed791-6196-4592-a598-41e60eed02a3)
 
 https://online.visual-paradigm.com/diagrams/features/azure-architecture-diagram-tool/
+https://excalidraw.com/
 
 ## Introduction
 
