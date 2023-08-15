@@ -11,7 +11,7 @@ applied some security controls to harden the environment,
 amd then remeasured metrics for another 24 hours. 
 These results are detailed below. 
 
-The metrics we will measured were:
+The metrics we will measure were:
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
