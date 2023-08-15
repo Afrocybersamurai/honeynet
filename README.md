@@ -31,7 +31,7 @@ The metrics we will measure were:
 
 
 ## Architecture Before Hardening / Security Controls
-![image](https://imgur.com/a/V4N1tgd)
+![below](https://i.imgur.com/a/V4N1tgd.png)
 
 
 ## Architecture After Hardening / Security Controls
