@@ -31,11 +31,11 @@ The metrics we will measure were:
 
 
 ## Architecture Before Hardening / Security Controls
-![below](https://i.imgur.com/a/V4N1tgd.png)
+![below](https://user-images.githubusercontent.com/136266716/260704569-80bb43bd-d39f-4000-b8ed-d43da7204d20.jpg)
 
 
 ## Architecture After Hardening / Security Controls
-![image](https://github.com/Afrocybersamurai/honeynet/assets/136266716/a2966eac-e767-4a91-ac02-ac6fdb49a70f)
+![image](https://user-images.githubusercontent.com/136266716/260706036-a07053c0-ed99-4447-b242-18509dec1a29.jpg)
 
 
 
