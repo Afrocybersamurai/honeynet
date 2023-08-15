@@ -41,16 +41,19 @@ The metrics we will measure were:
 - Microsoft Sentinel
 
 
-For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
-For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
+
 
 ## Attack Maps Before Hardening / Security Controls
+
+For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
+
 ![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
 ![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
 ![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
 
 ## Metrics Before Hardening / Security Controls
+For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
 
 The following table shows the metrics we measured in our insecure environment for 24 hours:
 Start Time 2023-03-15 17:04:29
@@ -76,11 +79,11 @@ Stop Time	2023-03-19 15:37
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
-| SecurityAlert            | 0
-| SecurityIncident         | 0
-| AzureNetworkAnalytics_CL | 0
+| SecurityEvent            | 8778 (-55%)
+| Syslog                   | 25 (-99%)
+| SecurityAlert            | 0 (-100%)
+| SecurityIncident         | 0 (-100%)
+| AzureNetworkAnalytics_CL | 0 (-100%)
 
 ## Utilizing NIST 800.61r2 Computer Incident Handling Guide
 
