@@ -19,15 +19,6 @@ The metrics we will measure were:
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-## Azure components utilised:
-
-- Virtual Network (VNet)
-- Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
-- Azure Key Vault
-- Azure Storage Account
-- Microsoft Sentinel
 
 
 ## Architecture Before Hardening / Security Controls
@@ -39,6 +30,15 @@ The metrics we will measure were:
 
 
 
+## Azure components utilised:
+
+- Virtual Network (VNet)
+- Network Security Group (NSG)
+- Virtual Machines (2 windows, 1 linux)
+- Log Analytics Workspace
+- Azure Key Vault
+- Azure Storage Account
+- Microsoft Sentinel
 
 
 For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
