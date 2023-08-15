@@ -22,11 +22,11 @@ The metrics we will measure were:
 
 
 ## Architecture Before Hardening / Security Controls
-![below](https://user-images.githubusercontent.com/136266716/260704569-80bb43bd-d39f-4000-b8ed-d43da7204d20.jpg)
+![Architecture Diagram](https://i.imgur.com/aBDwnKb.jpg)
 
 
 ## Architecture After Hardening / Security Controls
-![image](https://user-images.githubusercontent.com/136266716/260706036-a07053c0-ed99-4447-b242-18509dec1a29.jpg)
+![Architecture Diagram](https://i.imgur.com/YQNa9Pp.jpg)
 
 
 
@@ -48,9 +48,13 @@ The metrics we will measure were:
 
 For the "BEFORE" metrics, all resources were originally deployed, exposed to the internet. The Virtual Machines had both their Network Security Groups and built-in firewalls wide open, and all other resources are deployed with public endpoints visible to the Internet; aka, no use for Private Endpoints.
 
-![NSG Allowed Inbound Malicious Flows](https://i.imgur.com/1qvswSX.png)<br>
-![Linux Syslog Auth Failures](https://i.imgur.com/G1YgZt6.png)<br>
-![Windows RDP/SMB Auth Failures](https://i.imgur.com/ESr9Dlv.png)<br>
+![Linux SSH Auth Failure (Before)](https://user-images.githubusercontent.com/109401839/235823253-36926afe-3fbb-4292-a47b-69b3224f48fb.png)
+
+![MySQL Authentication Failures(Before)](https://user-images.githubusercontent.com/109401839/235823254-a3fb0c78-d5b0-4bf2-81b1-6ed1b85dead3.png)
+
+![nsg-malicious-allowed-in (before)](https://user-images.githubusercontent.com/109401839/235823255-188f63c4-9d83-445b-9400-ca44041e7f2c.png)
+
+![Windows RDP   SMB Authentication Failure(Before)](https://user-images.githubusercontent.com/109401839/235823259-ba8c71e4-3a75-4120-849e-7d9292b410a7.png)
 
 ## Metrics Before Hardening / Security Controls
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my admin workstation, and all other resources were protected by their built-in firewalls as well as Private Endpoint
@@ -59,13 +63,14 @@ The following table shows the metrics we measured in our insecure environment fo
 Start Time 2023-03-15 17:04:29
 Stop Time 2023-03-16 17:04:29
 
+
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 19470
-| Syslog                   | 3028
-| SecurityAlert            | 10
-| SecurityIncident         | 348
-| AzureNetworkAnalytics_CL | 843
+| SecurityEvent            | 39046
+| Syslog                   | 782
+| SecurityAlert            | 1
+| SecurityIncident         | 222
+| AzureNetworkAnalytics_CL | 1350
 
 
 ```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
@@ -78,9 +83,9 @@ Stop Time	2023-03-19 15:37
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778 (-55%)
-| Syslog                   | 25 (-99%)
-| SecurityAlert            | 0 (-100%)
+| SecurityEvent            | 0 (-100%)
+| Syslog                   | 0 (-100%)
+| SecurityAlert            | 0 (-100%) 
 | SecurityIncident         | 0 (-100%)
 | AzureNetworkAnalytics_CL | 0 (-100%)
 
